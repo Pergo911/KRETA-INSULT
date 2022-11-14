@@ -66,7 +66,6 @@ app.post('/interactions', async function (req, res) {
       }
       else {
         console.log(`New generic insult from ${member.user.username}#${member.user.discriminator} with ${a} adjectives on guild ${member.guild_id}`);
-        
       }
       // Log the request
 
