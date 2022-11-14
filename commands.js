@@ -73,39 +73,3 @@ export const INSULT_COMMAND = {
   ],
   type: 1,
 };
-
-// Repeat insult
-export const REPEAT_INSULT_COMMAND = {
-  name: 'firing-mode',
-  description: 'A következő csapás ismétlődik! Vigyázz, mert ebbe még te is belefulladhatsz!',
-  options: [
-    {
-      type: 4,
-      name: 'firing_mode',
-      description: 'Válaszd ki a tüzelési módot!',
-      required: true,
-      choices: [
-        {
-          name: 'Single-fire',
-          value: 0,
-        },
-        {
-          name: 'Burst',
-          value: 1,
-        },
-        {
-          name: 'Full-auto',
-          value: 2,
-        },
-      ],
-    },
-  ],
-  type: 1,
-};
-
-// Stop repeat insult
-export const STOP_REPEAT_INSULT_COMMAND = {
-  name: 'firestop',
-  description: 'Engedd el a ravaszt.',
-  type: 1,
-};
