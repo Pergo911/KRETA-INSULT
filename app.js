@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import {InteractionType, InteractionResponseType,} from 'discord-interactions';
 import {DiscordRequest, VerifyDiscordRequest} from './utils.js';
-import {INSULT_COMMAND, HasGuildCommands, REPEAT_INSULT_COMMAND, STOP_REPEAT_INSULT_COMMAND} from './commands.js';
+import {INSULT_COMMAND, HasGuildCommands} from './commands.js';
 import {constructInsult} from './constructInsult.js';
 
 // Create an express app
@@ -104,7 +104,5 @@ app.listen(PORT, () => {
   // Check if guild commands from commands.js are installed (if not, install them)
   HasGuildCommands(process.env.APP_ID, process.env.GUILD_ID, [
     INSULT_COMMAND,
-    REPEAT_INSULT_COMMAND,
-    STOP_REPEAT_INSULT_COMMAND
   ]);
 });
