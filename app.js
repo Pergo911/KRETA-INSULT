@@ -18,9 +18,7 @@ app.post('/interactions', async function (req, res) {
   // Interaction type and data
   const { type, id, data, member } = req.body;
 
-  /**
-   * Handle verification requests
-   */
+  // If PING, resoond PONG
   if (type === InteractionType.PING) {
     return res.send({ type: InteractionResponseType.PONG });
   }
