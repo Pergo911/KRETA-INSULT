@@ -62,10 +62,13 @@ app.post('/interactions', async function (req, res) {
       if (user !== '') {
         const userRes = await DiscordRequest(`users/${user}`, { method: 'GET' });
         userData = await userRes.json();
+        console.log(`New insult from ${member.user.username}#${member.user.discriminator} to ${userData.username}#${userData.discriminator} with ${a} adjectives on guild ${member.guild_id}`);
       }
-      else {targetName = '[Generic User]';}
+      else {
+        console.log(`New generic insult from ${member.user.username}#${member.user.discriminator} with ${a} adjectives on guild ${member.guild_id}`);
+        
+      }
       // Log the request
-      console.log(`New insult from ${member.user.username}#${member.user.discriminator} to ${userData.username}#${userData.discriminator} with ${a} adjectives`);
 
       // Send the insult
       if (user !== '') {
